@@ -23,8 +23,8 @@ class MyHomePage extends StatelessWidget {
         ),
         backgroundColor: AppColors.color7,
       ),
-      body: SafeArea(child:
-      Column(
+      body: SafeArea(
+        child: Column(
         children: [
           Row(
             mainAxisAlignment: MainAxisAlignment.center,

@@ -41,21 +41,21 @@ class MyHomePage extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              HomePageBoxWidget(screenWidth: screenWidth, screenHeight: screenHeight, text: 'BAJAJ',),
+              HomePageBoxWidget(screenWidth: screenWidth, screenHeight: screenHeight, text: 'BAJAJ', boxWidth: 0.40,),
               SizedBox(
                 width: screenWidth * 0.05,
               ),
-              HomePageBoxWidget(screenWidth: screenWidth, screenHeight: screenHeight, text: 'SUZUKI',),
+              HomePageBoxWidget(screenWidth: screenWidth, screenHeight: screenHeight, text: 'SUZUKI', boxWidth: 0.40,),
             ],
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              HomePageBoxWidget(screenWidth: screenWidth, screenHeight: screenHeight, text: 'TOYOTA',),
+              HomePageBoxWidget(screenWidth: screenWidth, screenHeight: screenHeight, text: 'TOYOTA', boxWidth: 0.40,),
               SizedBox(
                 width: screenWidth * 0.05,
               ),
-              HomePageBoxWidget(screenWidth: screenWidth, screenHeight: screenHeight, text: 'HONDA',),
+              HomePageBoxWidget(screenWidth: screenWidth, screenHeight: screenHeight, text: 'HONDA', boxWidth: 0.40,),
             ],
           ),
         ],

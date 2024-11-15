@@ -8,18 +8,19 @@ class HomePageBoxWidget extends StatelessWidget {
     super.key,
     required this.screenWidth,
     required this.screenHeight,
-    required this.text,
+    required this.text, required this.boxWidth,
   });
 
   final double screenWidth;
   final double screenHeight;
   final String text;
+  final double boxWidth;
 
   @override
   Widget build(BuildContext context) {
     return
       Container(
-      width: screenWidth * 0.4,
+      width: screenWidth * 0.45,
       height: screenHeight * 0.2,
       decoration: BoxDecoration(
         color: AppColors.themeBlue,

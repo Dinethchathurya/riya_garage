@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:riya_garage/View/AppColors.dart';
 
+import 'View/Screens/Components/DistrictsScreen.dart';
 import 'View/Screens/HomeScreen.dart';
 import 'View/Screens/SecondScreen.dart';
 
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         dialogBackgroundColor: AppColors.color2,
       ),
-      home: const SecondScreen(),
+      home: const DistrictsScreen(),
     );
   }
 }

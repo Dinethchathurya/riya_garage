@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:riya_garage/View/AppColors.dart';
 import 'package:riya_garage/View/Screens/SecondScreen.dart';
 
-import 'View/Screens/Components/DistrictsScreen.dart';
+import 'View/Screens/DistrictsScreen.dart';
 import 'View/Screens/HomeScreen.dart';
 
 void main() {

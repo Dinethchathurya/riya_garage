@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../../AppColors.dart';
@@ -20,7 +19,7 @@ class HomePageBoxWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return
       Container(
-      width: screenWidth * 0.45,
+      width: screenWidth * boxWidth,
       height: screenHeight * 0.2,
       decoration: BoxDecoration(
         color: AppColors.themeBlue,

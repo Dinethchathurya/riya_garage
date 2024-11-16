@@ -1,9 +1,10 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:riya_garage/View/Screens/Components/HomePageBoxWidget.dart';
 
 import '../../AppColors.dart';
+import 'DistrictMobileLayoutWidget.dart';
 import 'DistrictPageRowComponentWidget.dart';
+import 'DistrictScreenRowComponentForTabletWidget.dart';
 
 class DistrictsScreen extends StatelessWidget {
   const DistrictsScreen({super.key});
@@ -13,8 +14,6 @@ class DistrictsScreen extends StatelessWidget {
 
     double screenWidth = MediaQuery.of(context).size.width;
     double screenHeight = MediaQuery.of(context).size.height;
-    double boxwidth = screenWidth;
-
 
     return Scaffold(
       appBar: AppBar(
@@ -33,36 +32,43 @@ class DistrictsScreen extends StatelessWidget {
       ),
       body: SafeArea(
           child:  SingleChildScrollView(
-            child: Column(
-              children: [
-                DistrictPageRowComponentWidget(screenWidth: screenWidth, screenHeight: screenHeight, City1: 'Colombo', City2: 'Gampaha',),
-                DistrictPageRowComponentWidget(screenWidth: screenWidth, screenHeight: screenHeight, City1: 'Kalutara', City2: 'Kandy',),
-                DistrictPageRowComponentWidget(screenWidth: screenWidth, screenHeight: screenHeight, City1: 'Matale', City2: 'Nuwara Eliya',),
-                DistrictPageRowComponentWidget(screenWidth: screenWidth, screenHeight: screenHeight, City1: 'Galle', City2: 'Matara',),
-                DistrictPageRowComponentWidget(screenWidth: screenWidth, screenHeight: screenHeight, City1: 'Hambantota', City2: 'Trincomalee',),
-                DistrictPageRowComponentWidget(screenWidth: screenWidth, screenHeight: screenHeight, City1: 'Batticaloa', City2: 'Ampara',),
-                DistrictPageRowComponentWidget(screenWidth: screenWidth, screenHeight: screenHeight, City1: 'Jaffna', City2: 'Kilinochchi',),
-                DistrictPageRowComponentWidget(screenWidth: screenWidth, screenHeight: screenHeight, City1: 'Mannar', City2: 'Vavuniya',),
-                DistrictPageRowComponentWidget(screenWidth: screenWidth, screenHeight: screenHeight, City1: 'Mullaitivu', City2: 'Kurunegala',),
-                DistrictPageRowComponentWidget(screenWidth: screenWidth, screenHeight: screenHeight, City1: 'Puttalam', City2: 'Anuradhapura',),
-                DistrictPageRowComponentWidget(screenWidth: screenWidth, screenHeight: screenHeight, City1: 'Polonnaruwa', City2: 'Badulla',),
-                DistrictPageRowComponentWidget(screenWidth: screenWidth, screenHeight: screenHeight, City1: 'Moneragala', City2: 'Ratnapura',),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
+            child: LayoutBuilder(
+              builder: (BuildContext context, BoxConstraints constraints) {
+                if (constraints.maxWidth <= 600) {
+                  return DistrictMobileLayoutWidget(screenWidth: screenWidth, screenHeight: screenHeight);
+                } else {
+                  // Tablet Layout (medium screens)
+                  return Column(
                     children: [
-                      HomePageBoxWidget(
-                        screenWidth: screenWidth, screenHeight: screenHeight, text: 'Kegalle', boxWidth: 0.45,),
-                      SizedBox(width: screenWidth * 0.04,
-                ),
-              ],
+                      DistrictScreenRowComponentForTabletWidget(screenWidth: screenWidth, screenHeight: screenHeight, citys: ['Colombo', 'Gampaha', 'Kalutara'],),
+                      DistrictScreenRowComponentForTabletWidget(screenWidth: screenWidth, screenHeight: screenHeight, citys: ['Kandy', 'Matale', 'Nuwara Eliya'],),
+                      DistrictScreenRowComponentForTabletWidget(screenWidth: screenWidth, screenHeight: screenHeight, citys: ['Galle', 'Matara', 'Hambantota'],),
+                      DistrictScreenRowComponentForTabletWidget(screenWidth: screenWidth, screenHeight: screenHeight, citys: ['Trincomalee', 'Kilinochchi', 'Mannar'],),
+                      DistrictScreenRowComponentForTabletWidget(screenWidth: screenWidth, screenHeight: screenHeight, citys: ['Vavuniya', 'Mullaitivu', 'Kurunegala'],),
+                      DistrictScreenRowComponentForTabletWidget(screenWidth: screenWidth, screenHeight: screenHeight, citys: ['Puttalam', 'Anuradhapura', 'Polonnaruwa'],),
+                      DistrictScreenRowComponentForTabletWidget(screenWidth: screenWidth, screenHeight: screenHeight, citys: ['Badulla', 'Moneragala', 'Ratnapura'],),                      DistrictScreenRowComponentForTabletWidget(screenWidth: screenWidth, screenHeight: screenHeight, citys: ['Galle', 'Matara', 'Colombo'],),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          HomePageBoxWidget(screenWidth: screenWidth, screenHeight: screenHeight, text: 'Kegalle', boxWidth: 0.3,),
+                          SizedBox(
+                            width: screenWidth * 0.025,
+                          ),
+                          ]
+                      ),
+                    ],
+                  );
+                }
+              },
             ),
-              ],
-            ),
-          )
-
+          ),
       ),
     ) ;
   }
 }
+
+
+
+
 
 

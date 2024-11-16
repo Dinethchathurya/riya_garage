@@ -4,6 +4,7 @@ import 'package:riya_garage/View/Screens/SecondScreen.dart';
 
 import 'View/Screens/DistrictsScreen.dart';
 import 'View/Screens/HomeScreen.dart';
+import 'View/Screens/SearchTownScreen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         dialogBackgroundColor: AppColors.color2,
       ),
-      home: const DistrictsScreen(),
+      home: SearchTownScreen(),
     );
   }
 }

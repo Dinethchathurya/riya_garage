@@ -26,17 +26,17 @@ class ProvidersListTileWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListTile(
       leading: IconPersonWidget(screenWidth: screenWidth),
-      title: Text('Anura Motor Cycle Works (Motorcycles)'),
-      titleTextStyle : TextStyle(
+      title: Text(providerName),
+      titleTextStyle : const TextStyle(
         color: Colors.black,
         fontWeight: FontWeight.bold,
       ),
       subtitle: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text('Address: No.B/482/5, Thissapura, Ampara'),
-          SizedBox(height: 4), // Adds some spacing between the lines
-          Text('0717873060'), // The additional detail you want to add
+          Text(providerAddress),
+          const SizedBox(height: 4), // Adds some spacing between the lines
+          Text(providerPhoneNumber), // The additional detail you want to add
         ],
       ),
       trailing: GestureDetector(

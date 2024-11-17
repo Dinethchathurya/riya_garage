@@ -1,21 +1,11 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import '../../Data/Bajaj/Maintenance/Ampara.dart';
-import '../../Model/ListofProviders.dart';
-import '../../Model/Providers.dart';
+import 'package:provider/provider.dart';
+import 'package:riya_garage/Controller/loadProviderData.dart';
 import '../AppColors.dart';
-import 'Components/Icons/IconCallWidget.dart';
-import 'Components/Icons/IconPersonWidget.dart';
 import 'Components/ProvidersListTileWidget.dart';
-//import 'package:flutter_phone_direct_caller/flutter_phone_direct_caller.dart';
-//import 'package:url_launcher/url_launcher.dart';
-import 'package:riya_garage/Model/Providers.dart';
 
 class SearchTownScreen extends StatelessWidget {
-
-  SearchTownScreen({super.key});
-
-  List<Map<String, dynamic>> items = maintanceAmpara ;
+  const SearchTownScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -39,19 +29,23 @@ class SearchTownScreen extends StatelessWidget {
         backgroundColor: AppColors.color7,
       ),
       body: SafeArea(
-          child: ListView.builder(
-            itemCount: items.length,
-            itemBuilder: (context, idx) {
-              var item = items[idx];
-              return ProvidersListTileWidget(
-                screenWidth: screenWidth,
-                providerName: item['name'],
-                providerAddress: item['des'],
-                providerPhoneNumber: item['call'],
-              );
-            },
-          )
-        ,
+          child: Consumer<Providers>(
+              builder: (context, providers, child) {
+                return ListView.builder(
+                  itemCount: providers.availableProviders.length,
+                  itemBuilder: (context, index) {
+                    var provider = providers.availableProviders[index];
+                    return
+                      ProvidersListTileWidget(
+                        screenWidth: screenWidth,
+                        providerName: provider['name'],
+                        providerAddress: provider['des'],
+                        providerPhoneNumber: provider['call'],
+                      );
+                  },
+                );
+              },
+          ),
       ),
     );
   }

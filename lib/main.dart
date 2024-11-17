@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:riya_garage/Controller/loadProviderData.dart';
 import 'package:riya_garage/View/AppColors.dart';
-import 'package:riya_garage/View/Screens/SecondScreen.dart';
-
-import 'View/Screens/DistrictsScreen.dart';
-import 'View/Screens/HomeScreen.dart';
 import 'View/Screens/SearchTownScreen.dart';
 
 void main() {
@@ -15,13 +13,17 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        dialogBackgroundColor: AppColors.color2,
-      ),
-      home: SearchTownScreen(),
-    );
+    return
+      ChangeNotifierProvider(
+          create: (_) => new Providers(),
+          child: MaterialApp(
+            title: 'Flutter Demo',
+            theme: ThemeData(
+              dialogBackgroundColor: AppColors.color2,
+            ),
+            home: const SearchTownScreen(),
+          )
+      );
   }
 }
 

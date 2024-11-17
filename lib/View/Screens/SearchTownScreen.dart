@@ -1,17 +1,21 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:url_launcher/url_launcher.dart';
-
+import '../../Data/Bajaj/Maintenance/Ampara.dart';
+import '../../Model/ListofProviders.dart';
+import '../../Model/Providers.dart';
 import '../AppColors.dart';
+import 'Components/Icons/IconCallWidget.dart';
+import 'Components/Icons/IconPersonWidget.dart';
+import 'Components/ProvidersListTileWidget.dart';
+//import 'package:flutter_phone_direct_caller/flutter_phone_direct_caller.dart';
+//import 'package:url_launcher/url_launcher.dart';
+import 'package:riya_garage/Model/Providers.dart';
 
 class SearchTownScreen extends StatelessWidget {
+
   SearchTownScreen({super.key});
 
-  List<String> items = [
-    'hello',
-    'galle',
-    'matara'
-  ];
+  List<Map<String, dynamic>> items = maintanceAmpara ;
 
   @override
   Widget build(BuildContext context) {
@@ -27,46 +31,33 @@ class SearchTownScreen extends StatelessWidget {
           height: screenHeight * 0.3, // Adjust height as needed
           fit: BoxFit.cover, // Maintain the aspect ratio of the image
         ),
-        title: const Text("Home",
+        title: const Text("Providers",
           style: TextStyle(
             color: Colors.white,
           ),
         ),
         backgroundColor: AppColors.color7,
       ),
-      body: ListView.builder(
-        itemCount: items.length,
-        itemBuilder: (context, idx) {
-          var item = items[idx];
-          return ListTile(
-            leading: Icon(
-              Icons.person,
-              size: screenWidth * 0.1,
-              color: AppColors.themeBlue,
-            ),
-            title: Text('Anura Motor Cycle Works (Motorcycles)'),
-            titleTextStyle : TextStyle(
-              color: Colors.black,
-              fontWeight: FontWeight.bold,
-            ),
-            subtitle: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text('Address: No.B/482/5, Thissapura, Ampara'),
-                SizedBox(height: 4), // Adds some spacing between the lines
-                Text('0717873060'), // The additional detail you want to add
-              ],
-            ),
-            trailing: GestureDetector(
-              child: Icon(
-                Icons.add_ic_call,
-                size: screenWidth * 0.1,
-                color: Colors.green,
-              ),
-            ),
-          );
-        },
+      body: SafeArea(
+          child: ListView.builder(
+            itemCount: items.length,
+            itemBuilder: (context, idx) {
+              var item = items[idx];
+              return ProvidersListTileWidget(
+                screenWidth: screenWidth,
+                providerName: item['name'],
+                providerAddress: item['des'],
+                providerPhoneNumber: item['call'],
+              );
+            },
+          )
+        ,
       ),
     );
   }
 }
+
+
+
+
+

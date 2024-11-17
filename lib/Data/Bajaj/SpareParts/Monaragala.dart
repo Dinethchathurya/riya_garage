@@ -1,0 +1,111 @@
+List<Map<String, dynamic>> BajajSparePartsMonaragala = [
+
+{
+      "id": 1,
+      "name": "A.N.W. Motors (Motorcycles & Three Wheelers)",
+      "des": "Address: Pilisarana Road, Hulanduwa, Monaragala",
+      "call": "0552277175",
+    },
+    {
+      "id": 2,
+      "name": "Anura Motors (Motorcycles & KYM)",
+      "des": "Address: Monaragala Road, Buttala",
+      "call": "0727639946",
+    },
+    {
+      "id": 3,
+      "name": "Bajaj Motors (Motorcycles & Three Wheelers)",
+      "des": "Address: No.66, Medagama, Bibila",
+      "call": "0774054335",
+    },
+    {
+      "id": 4,
+      "name": "Boralessa Motors (Three Wheelers)",
+      "des": "Address: No.38, Monaragala Road, Siyambalanduwa",
+      "call": "0724726637",
+    },
+    {
+      "id": 5,
+      "name": "Jayamini Motors (Motorcycles & Three Wheelers)",
+      "des": "Address: Makulla Town, Dambagalla",
+      "call": "0724219603",
+    },
+    {
+      "id": 6,
+      "name": "Jithsara Motors (Motorcycles & Three Wheelers)",
+      "des": "Address: No.62, Buttala Road, Badallkumbura",
+      "call": "0778911285",
+    },
+    {
+      "id": 7,
+      "name": "New Ishara Motors (Motorcycles, Three Wheelers & Qute)",
+      "des": "Address: Ella Road, Wellawaya",
+      "call": "0773674411",
+    },
+    {
+      "id": 8,
+      "name": "New Lakshan Motors (Motorcycles, Three Wheelers & Qute)",
+      "des": "Address: Pothuvil Road, Monaragala",
+      "call": "0773873382",
+    },
+    {
+      "id": 9,
+      "name": "R.M.G. Motors (Motorcycles, Three Wheelers & Qute)",
+      "des": "Address: Maligathanna Junction, Badalkumbura",
+      "call": "0552250556",
+    },
+    {
+      "id": 10,
+      "name": "Sandun Motors (Motorcycles)",
+      "des": "Address: Kumaradasa Mawatha, Monaragala Road, Wellawaya",
+      "call": "0725641809",
+    },
+    {
+      "id": 11,
+      "name": "Sanjaya Motors (Motorcycles, KTM & Three Wheelers)",
+      "des": "Address: No.68, Potuwil Road, Monaragala",
+      "call": "0772388971",
+    },
+    {
+      "id": 12,
+      "name": "Sisira Motors (Motorcycles & Three Wheelers)",
+      "des": "Address: Habarattawela, Sevanagala",
+      "call": "0724219604",
+    },
+    {
+      "id": 13,
+      "name": "Supun Motors (Motorcycles & Three Wheelers)",
+      "des": "Address: No.133, Wellawaya Road, Buttala",
+      "call": "0718034881",
+    },
+    {
+      "id": 14,
+      "name": "Suranga Motors (Motorcycles & Three Wheelers)",
+      "des": "Address: No.214, Embilipitiya Road, Thanamalwila",
+      "call": "0771093383",
+    },
+    {
+      "id": 15,
+      "name": "Tharaka Motors (Motorcycles & Three Wheelers)",
+      "des": "Address: Near The Police Post, Liyangolla, Dombagahawela",
+      "call": "0723712904",
+    },
+    {
+      "id": 16,
+      "name": "Thushara Motors & Service Centre (Motorcycles & Three Wheelers)",
+      "des": "Address: Dehigashandiya, Weherayaya, Ethiliwewa",
+      "call": "0776447152",
+    },
+    {
+      "id": 17,
+      "name": "Wanasingha Motors (Motorcycles, KTM, Three Wheelers & Qute)",
+      "des": "Address: Isuru Uyana, Mahiyangana Road, Bibila",
+      "call": "0716095273",
+    },
+    {
+      "id": 18,
+      "name": "Weerasinghe Motors (Motorcycles & Three Wheelers)",
+      "des": "Address: Thanamalwila",
+      "call": "0472285018",
+    },
+];

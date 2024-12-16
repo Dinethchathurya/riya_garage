@@ -19,15 +19,27 @@ class DistrictScreenRowComponentForTabletWidget extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        HomePageBoxWidget(screenWidth: screenWidth, screenHeight: screenHeight, text: citys[0], boxWidth: 0.3,),
+        GestureDetector(
+            onTap: (){
+              Navigator.pushNamed(context, '/searchTown');
+            },
+            child: HomePageBoxWidget(screenWidth: screenWidth, screenHeight: screenHeight, text: citys[0], boxWidth: 0.3,)),
         SizedBox(
           width: screenWidth * 0.025,
         ),
-        HomePageBoxWidget(screenWidth: screenWidth, screenHeight: screenHeight, text: citys[1], boxWidth: 0.3,),
+        GestureDetector(
+            onTap: (){
+              Navigator.pushNamed(context, '/searchTown');
+            },
+            child: HomePageBoxWidget(screenWidth: screenWidth, screenHeight: screenHeight, text: citys[1], boxWidth: 0.3,)),
         SizedBox(
           width: screenWidth * 0.025,
         ),
-        HomePageBoxWidget(screenWidth: screenWidth, screenHeight: screenHeight, text: citys[2], boxWidth: 0.3,),
+        GestureDetector(
+            onTap: (){
+              Navigator.pushNamed(context, '/searchTown');
+            },
+            child: HomePageBoxWidget(screenWidth: screenWidth, screenHeight: screenHeight, text: citys[2], boxWidth: 0.3,)),
       ],
     );
   }

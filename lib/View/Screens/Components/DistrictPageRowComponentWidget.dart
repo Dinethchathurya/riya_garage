@@ -20,11 +20,19 @@ class DistrictPageRowComponentWidget extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        HomePageBoxWidget(screenWidth: screenWidth, screenHeight: screenHeight, text: City1, boxWidth: 0.45,),
+        GestureDetector(
+            onTap: (){
+              Navigator.pushNamed(context, '/searchTown');
+            },
+            child: HomePageBoxWidget(screenWidth: screenWidth, screenHeight: screenHeight, text: City1, boxWidth: 0.45,)),
         SizedBox(
           width: screenWidth * 0.04,
         ),
-        HomePageBoxWidget(screenWidth: screenWidth, screenHeight: screenHeight, text: City2, boxWidth: 0.45,),
+        GestureDetector(
+            onTap: (){
+              Navigator.pushNamed(context, '/searchTown');
+            },
+            child: HomePageBoxWidget(screenWidth: screenWidth, screenHeight: screenHeight, text: City2, boxWidth: 0.45,)),
       ],
     );
   }

@@ -2,6 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:riya_garage/Controller/loadProviderData.dart';
 import 'package:riya_garage/View/AppColors.dart';
+import 'package:riya_garage/View/Screens/DistrictsScreen.dart';
+import 'package:riya_garage/View/Screens/HomeScreen.dart';
+import 'package:riya_garage/View/Screens/SecondScreen.dart';
+
 import 'View/Screens/SearchTownScreen.dart';
 
 void main() {
@@ -17,11 +21,17 @@ class MyApp extends StatelessWidget {
       ChangeNotifierProvider(
           create: (_) => new Providers(),
           child: MaterialApp(
-            title: 'Flutter Demo',
+            title: 'Riya',
             theme: ThemeData(
               dialogBackgroundColor: AppColors.color2,
             ),
-            home: const SearchTownScreen(),
+            routes:{
+              '/': (context) => MyHomePage(),          // Home route
+              '/second': (context) => SecondScreen(),
+              '/districts' : (context) => DistrictsScreen(),
+              '/searchTown' : (context) => SearchTownScreen()// Named route for SecondScreen
+            },
+              initialRoute: '/',
           )
       );
   }

@@ -1,8 +1,7 @@
 import 'dart:core';
-import 'dart:core';
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+//import 'package:url_launcher/url_launcher.dart';
 
 import 'Icons/IconCallWidget.dart';
 import 'Icons/IconPersonWidget.dart';
@@ -41,20 +40,15 @@ class ProvidersListTileWidget extends StatelessWidget {
       ),
       trailing: GestureDetector(
         onTap: () async{
-          // const String phoneNumber= '0717873060';
-          //
-          // await FlutterPhoneDirectCaller.callNumber(phoneNumber);
 
-          // var phoneNumber = Uri.parse('tel:+1234567890');
+          // final Uri _url = Uri.parse('tel:0777426101');;
           // // Replace with the actual number
           // try {
-          //   if (await canLaunchUrl(phoneNumber)) {
-          //     await launchUrl(phoneNumber);
-          //   } else {
-          //     throw 'Could not launch $phoneNumber';
+          //   if (!await launchUrl(_url)) {
+          //     throw Exception('Could not launch $_url');
           //   }
           // }catch(er){
-          //   print(er);
+          //   print("url louncher error : ");
           // }
 
         },

@@ -19,6 +19,8 @@ class DistrictMobileLayoutWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
+
+        
         DistrictPageRowComponentWidget(
           screenWidth: screenWidth,
           screenHeight: screenHeight,

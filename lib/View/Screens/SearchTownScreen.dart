@@ -12,13 +12,9 @@ class SearchTownScreen extends StatefulWidget {
 }
 
 class _SearchTownScreenState extends State<SearchTownScreen> {
-  // Create a controller for the search input
+
   TextEditingController _searchController = TextEditingController();
-
-  // List to hold the filtered providers
   List<Map<String, dynamic>> _filteredProviders = [];
-
-
 
   @override
   Widget build(BuildContext context) {
@@ -27,12 +23,8 @@ class _SearchTownScreenState extends State<SearchTownScreen> {
 
     return Scaffold(
       appBar: AppBar(
-        leading: Image.asset(
-          'assets/Riya-icon.png',
-          width: screenWidth * 0.8, // Adjust the image size
-          height: screenHeight * 0.3, // Adjust height
-          fit: BoxFit.cover, // Maintain aspect ratio
-        ),
+
+        // leading: ,
         title: const Text(
           "Providers",
           style: TextStyle(
@@ -48,18 +40,14 @@ class _SearchTownScreenState extends State<SearchTownScreen> {
               padding: const EdgeInsets.symmetric(horizontal: 16.0),
               child: SearchBar(
                 controller: _searchController,
-                onTap: () {
-                  // Handle tap if necessary
-                },
                 onChanged: (query) {
-                  // Filter providers based on the search query
                   _filterProviders(query);
                 },
                 leading: const Icon(Icons.search),
                 hintText: 'Search Here',
                 shape: WidgetStateProperty.all(
                   RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(5.0), // Set your desired radius
+                    borderRadius: BorderRadius.circular(10.0), // Set your desired radius
                   ),
                 ),
                 shadowColor:WidgetStateProperty.all(
@@ -68,8 +56,6 @@ class _SearchTownScreenState extends State<SearchTownScreen> {
                 backgroundColor: WidgetStateProperty.all(
                   Colors.white,
                 ),
-
-
               ),
             ),
             // Use Expanded to allow ListView to take up remaining space
@@ -112,7 +98,7 @@ class _SearchTownScreenState extends State<SearchTownScreen> {
       });
     } else {
       setState(() {
-        _filteredProviders = Provider.of<DetailsProvider>(context, listen: false)
+        _filteredProviders = Provider.of<DetailsProvider>(context, listen: true)
             .availableProviders
             .where((provider) {
           // You can adjust the filter logic here as needed

@@ -14,13 +14,7 @@ class DistrictsScreen extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        leading: Image.asset(
-          'assets/Riya-icon.png',
-          width: screenWidth * 0.8, // Increase the image size (adjust as needed)
-          height: screenHeight * 0.3, // Adjust height as needed
-          fit: BoxFit.cover, // Maintain the aspect ratio of the image
-        ),
-        title: const Text("Home",
+        title: const Text("City",
           style: TextStyle(
             color: Colors.white,
           ),
@@ -32,6 +26,7 @@ class DistrictsScreen extends StatelessWidget {
             child: LayoutBuilder(
               builder: (BuildContext context, BoxConstraints constraints) {
                 if (constraints.maxWidth <= 600) {
+
                   return DistrictMobileLayoutWidget(screenWidth: screenWidth, screenHeight: screenHeight * 0.5);
                 } else {
                   // Tablet Layout (medium screens)

@@ -1,8 +1,6 @@
 import 'dart:core';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-//import 'package:url_launcher/url_launcher.dart';
-
 import 'Icons/IconCallWidget.dart';
 import 'Icons/IconPersonWidget.dart';
 
@@ -48,7 +46,7 @@ class ProvidersListTileWidget extends StatelessWidget {
           //     throw Exception('Could not launch $_url');
           //   }
           // }catch(er){
-          //   print("url louncher error : ");
+          //   print("url launchUrl error : ");
           // }
 
         },

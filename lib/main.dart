@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:riya_garage/Controller/loadProviderData.dart';
+import 'package:riya_garage/Model/DetailsProvider.dart';
 import 'package:riya_garage/View/AppColors.dart';
 import 'package:riya_garage/View/Screens/DistrictsScreen.dart';
 import 'package:riya_garage/View/Screens/HomeScreen.dart';
@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return
       ChangeNotifierProvider(
-          create: (_) => new Providers(),
+          create: (context) => DetailsProvider(),
           child: MaterialApp(
             title: 'Riya',
             theme: ThemeData(

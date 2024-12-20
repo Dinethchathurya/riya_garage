@@ -1,5 +1,7 @@
 import 'package:flutter/cupertino.dart';
+import 'package:provider/provider.dart';
 
+import '../../../Model/DetailsProvider.dart';
 import 'HomePageBoxWidget.dart';
 
 class DistrictPageRowComponentWidget extends StatelessWidget {
@@ -15,24 +17,39 @@ class DistrictPageRowComponentWidget extends StatelessWidget {
   final double screenHeight;
   final String City1;
   final String City2;
+
   @override
   Widget build(BuildContext context) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         GestureDetector(
-            onTap: (){
-              Navigator.pushNamed(context, '/searchTown');
-            },
-            child: HomePageBoxWidget(screenWidth: screenWidth, screenHeight: screenHeight, text: City1, boxWidth: 0.45,)),
+          onTap: () {
+            Provider.of<DetailsProvider>(context, listen: false).setCity(City1);
+            Navigator.pushNamed(context, '/searchTown');
+          },
+          child: HomePageBoxWidget(
+            screenWidth: screenWidth,
+            screenHeight: screenHeight,
+            text: City1,
+            boxWidth: 0.45,
+          ),
+        ),
         SizedBox(
           width: screenWidth * 0.04,
         ),
         GestureDetector(
-            onTap: (){
-              Navigator.pushNamed(context, '/searchTown');
-            },
-            child: HomePageBoxWidget(screenWidth: screenWidth, screenHeight: screenHeight, text: City2, boxWidth: 0.45,)),
+          onTap: () {
+            Provider.of<DetailsProvider>(context, listen: false).setCity(City2);
+            Navigator.pushNamed(context, '/searchTown');
+          },
+          child: HomePageBoxWidget(
+            screenWidth: screenWidth,
+            screenHeight: screenHeight,
+            text: City2,
+            boxWidth: 0.45,
+          ),
+        ),
       ],
     );
   }

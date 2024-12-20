@@ -1,5 +1,7 @@
 import 'package:flutter/cupertino.dart';
+import 'package:provider/provider.dart';
 
+import '../../../Model/DetailsProvider.dart';
 import 'DistrictPageRowComponentWidget.dart';
 import 'HomePageBoxWidget.dart';
 
@@ -92,11 +94,17 @@ class DistrictMobileLayoutWidget extends StatelessWidget {
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            HomePageBoxWidget(
-              screenWidth: screenWidth,
-              screenHeight: screenHeight,
-              text: 'Kegalle',
-              boxWidth: 0.45,
+            GestureDetector(
+              onTap: () {
+                Provider.of<DetailsProvider>(context, listen: false).setCity('Kegalle');
+                Navigator.pushNamed(context, '/searchTown');
+              },
+              child: HomePageBoxWidget(
+                screenWidth: screenWidth,
+                screenHeight: screenHeight,
+                text: 'Kegalle',
+                boxWidth: 0.45,
+              ),
             ),
             SizedBox(
               width: screenWidth * 0.04,

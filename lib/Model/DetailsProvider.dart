@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
+import 'package:riya_garage/Model/dataClass.dart';
 
 import '../Data/Bajaj/Maintenance/Ampara.dart';
+import '../Data/Bajaj/Maintenance/Anuradapura.dart';
 
 class DetailsProvider with ChangeNotifier {
 
@@ -8,7 +10,7 @@ class DetailsProvider with ChangeNotifier {
   late String category;
   late String city;
 
-  final List<Map<String, dynamic>> availableProviders = maintanceAmpara;
+  late List<Map<String, dynamic>> availableProviders = maintanceAnuradapura;
 
   setCompany (newCompanyName){
     company = newCompanyName;
@@ -19,13 +21,17 @@ class DetailsProvider with ChangeNotifier {
     category = newCategory;
     notifyListeners();
   }
+
   setCity (newCity){
     city = newCity;
+    print(company+category+city);
+    setAvailableProviders();
     notifyListeners();
   }
 
   setAvailableProviders(){
-
+    DataClass ss = new DataClass();
+    availableProviders = ss.getListOfProviders(company+category+city);
   }
 
 }

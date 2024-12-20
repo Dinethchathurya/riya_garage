@@ -1,4 +1,4 @@
-List<Map<String, dynamic>> HondaSparePartsKandy = [
+List<Map<String, dynamic>> ToyotaSparePartsKandy = [
 {
       "id": 1,
       "name": "Indra Motor Spares (Pvt) Ltd",

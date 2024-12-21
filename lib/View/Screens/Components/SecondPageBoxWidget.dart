@@ -19,7 +19,7 @@ class SecondPageBoxWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: screenWidth * 0.8,
+      width: screenWidth <=600 ? screenWidth * 0.8 : screenWidth * 0.4,
       height: screenHeight * 0.3, // Keep container height the same
       decoration: BoxDecoration(
         color: AppColors.themeBlue,

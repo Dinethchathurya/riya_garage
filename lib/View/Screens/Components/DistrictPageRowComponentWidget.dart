@@ -21,7 +21,7 @@ class DistrictPageRowComponentWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
+      mainAxisAlignment:  MainAxisAlignment.center ,
       children: [
         GestureDetector(
           onTap: () {
@@ -38,18 +38,19 @@ class DistrictPageRowComponentWidget extends StatelessWidget {
         SizedBox(
           width: screenWidth * 0.04,
         ),
-        GestureDetector(
-          onTap: () {
-            Provider.of<DetailsProvider>(context, listen: false).setCity(City2);
-            Navigator.pushNamed(context, '/searchTown');
-          },
-          child: HomePageBoxWidget(
-            screenWidth: screenWidth,
-            screenHeight: screenHeight,
-            text: City2,
-            boxWidth: 0.45,
+        if (City2.isNotEmpty) // Conditional check for City2
+          GestureDetector(
+            onTap: () {
+              Provider.of<DetailsProvider>(context, listen: false).setCity(City2);
+              Navigator.pushNamed(context, '/searchTown');
+            },
+            child: HomePageBoxWidget(
+              screenWidth: screenWidth,
+              screenHeight: screenHeight,
+              text: City2,
+              boxWidth: 0.45,
+            ),
           ),
-        ),
       ],
     );
   }

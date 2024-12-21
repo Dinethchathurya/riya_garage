@@ -26,7 +26,6 @@ class DistrictsScreen extends StatelessWidget {
             child: LayoutBuilder(
               builder: (BuildContext context, BoxConstraints constraints) {
                 if (constraints.maxWidth <= 600) {
-
                   return DistrictMobileLayoutWidget(screenWidth: screenWidth, screenHeight: screenHeight * 0.5);
                 } else {
                   // Tablet Layout (medium screens)

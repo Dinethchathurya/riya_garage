@@ -14,12 +14,17 @@ class HomePageFirebaseImageWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: screenWidth * 0.85,
-      height: screenHeight * 0.2,
+      height: screenWidth <= 600 ? screenHeight * 0.2 :  screenHeight * 0.28,
       decoration: BoxDecoration(
-        color: Colors.grey,
-        borderRadius: BorderRadius.circular(20),  // Make it a circle
+        borderRadius: BorderRadius.circular(20),
       ),
       margin: EdgeInsets.only(top: screenHeight * 0.05),
+      child: Image.asset(
+        'assets/LOGO.png',
+        width: screenWidth * 0.8,
+        height: screenHeight * 0.3,
+        fit: BoxFit.cover,
+      ),
     );
   }
 }

@@ -17,15 +17,11 @@ class MyHomePage extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        leading: Image.asset(
-          'assets/Riya-icon.png',
-          width: screenWidth * 0.8, // Increase the image size (adjust as needed)
-          height: screenHeight * 0.3, // Adjust height as needed
-          fit: BoxFit.cover, // Maintain the aspect ratio of the image
-        ),
-        title: const Text("Home",
-          style: TextStyle(
-            color: Colors.white,
+        title: const Center(
+          child: Text("Home",
+            style: TextStyle(
+              color: Colors.white,
+            ),
           ),
         ),
         backgroundColor: AppColors.color7,

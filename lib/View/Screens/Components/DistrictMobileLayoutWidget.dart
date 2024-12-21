@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:provider/provider.dart';
-
 import '../../../Model/DetailsProvider.dart';
 import 'DistrictPageRowComponentWidget.dart';
 import 'HomePageBoxWidget.dart';
@@ -19,97 +18,239 @@ class DistrictMobileLayoutWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        DistrictPageRowComponentWidget(
-          screenWidth: screenWidth,
-          screenHeight: screenHeight,
-          City1: 'Colombo',
-          City2: 'Gampaha',
+        GestureDetector(
+          onTap: () {
+            Provider.of<DetailsProvider>(context, listen: false).setProvince('WesternProvince');
+          },
+          child: HomePageBoxWidget(
+            screenWidth: screenWidth,
+            screenHeight: screenHeight,
+            text: 'Western Province',
+            boxWidth: 0.95,
+          ),
         ),
-        DistrictPageRowComponentWidget(
-          screenWidth: screenWidth,
-          screenHeight: screenHeight,
-          City1: 'Kalutara',
-          City2: 'Kandy',
+        Visibility(
+          visible: Provider.of<DetailsProvider>(context).province == 'WesternProvince' ? true : false,
+          child: DistrictPageRowComponentWidget(
+            screenWidth: screenWidth,
+            screenHeight: screenHeight,
+            City1: 'Colombo',
+            City2: 'Gampaha',
+          ),
         ),
-        DistrictPageRowComponentWidget(
-          screenWidth: screenWidth,
-          screenHeight: screenHeight,
-          City1: 'Matale',
-          City2: 'Nuwara Eliya',
+        Visibility(
+          visible: Provider.of<DetailsProvider>(context).province == 'WesternProvince' ? true : false,
+          child: DistrictPageRowComponentWidget(
+            screenWidth: screenWidth,
+            screenHeight: screenHeight,
+            City1: 'Kalutara',
+            City2: '',
+          ),
         ),
-        DistrictPageRowComponentWidget(
-          screenWidth: screenWidth,
-          screenHeight: screenHeight,
-          City1: 'Galle',
-          City2: 'Matara',
+        GestureDetector(
+          onTap: () {
+            Provider.of<DetailsProvider>(context, listen: false).setProvince('CentralProvince');
+          },
+          child: HomePageBoxWidget(
+            screenWidth: screenWidth,
+            screenHeight: screenHeight,
+            text: 'Central Province',
+            boxWidth: 0.95,
+          ),
         ),
-        DistrictPageRowComponentWidget(
-          screenWidth: screenWidth,
-          screenHeight: screenHeight,
-          City1: 'Hambantota',
-          City2: 'Trincomalee',
+        Visibility(
+          visible: Provider.of<DetailsProvider>(context).province == 'CentralProvince' ? true : false,
+          child: DistrictPageRowComponentWidget(
+            screenWidth: screenWidth,
+            screenHeight: screenHeight,
+            City1: 'Matale',
+            City2: 'Nuwara Eliya',
+          ),
         ),
-        DistrictPageRowComponentWidget(
-          screenWidth: screenWidth,
-          screenHeight: screenHeight,
-          City1: 'Batticaloa',
-          City2: 'Ampara',
+        Visibility(
+          visible: Provider.of<DetailsProvider>(context).province == 'CentralProvince' ? true : false,
+          child: DistrictPageRowComponentWidget(
+            screenWidth: screenWidth,
+            screenHeight: screenHeight,
+            City1: 'Kandy',
+            City2: '',
+          ),
         ),
-        DistrictPageRowComponentWidget(
-          screenWidth: screenWidth,
-          screenHeight: screenHeight,
-          City1: 'Jaffna',
-          City2: 'Kilinochchi',
+        GestureDetector(
+          onTap: () {
+            Provider.of<DetailsProvider>(context, listen: false).setProvince('SouthernProvince');
+          },
+          child: HomePageBoxWidget(
+            screenWidth: screenWidth,
+            screenHeight: screenHeight,
+            text: 'Southern Province',
+            boxWidth: 0.95,
+          ),
         ),
-        DistrictPageRowComponentWidget(
-          screenWidth: screenWidth,
-          screenHeight: screenHeight,
-          City1: 'Mannar',
-          City2: 'Vavuniya',
+        Visibility(
+          visible: Provider.of<DetailsProvider>(context).province == 'SouthernProvince' ? true : false,
+          child: DistrictPageRowComponentWidget(
+            screenWidth: screenWidth,
+            screenHeight: screenHeight,
+            City1: 'Galle',
+            City2: 'Matara',
+          ),
         ),
-        DistrictPageRowComponentWidget(
-          screenWidth: screenWidth,
-          screenHeight: screenHeight,
-          City1: 'Mullaitivu',
-          City2: 'Kurunegala',
+        Visibility(
+          visible: Provider.of<DetailsProvider>(context).province == 'SouthernProvince' ? true : false,
+          child: DistrictPageRowComponentWidget(
+            screenWidth: screenWidth,
+            screenHeight: screenHeight,
+            City1: 'Hambantota',
+            City2: '',
+          ),
         ),
-        DistrictPageRowComponentWidget(
-          screenWidth: screenWidth,
-          screenHeight: screenHeight,
-          City1: 'Puttalam',
-          City2: 'Anuradhapura',
+        GestureDetector(
+          onTap: () {
+            Provider.of<DetailsProvider>(context, listen: false).setProvince('NorthernProvince');
+          },
+          child: HomePageBoxWidget(
+            screenWidth: screenWidth,
+            screenHeight: screenHeight,
+            text: 'Northern Province',
+            boxWidth: 0.95,
+          ),
         ),
-        DistrictPageRowComponentWidget(
-          screenWidth: screenWidth,
-          screenHeight: screenHeight,
-          City1: 'Polonnaruwa',
-          City2: 'Badulla',
+        Visibility(
+          visible: Provider.of<DetailsProvider>(context).province == 'NorthernProvince' ? true : false,
+          child: DistrictPageRowComponentWidget(
+            screenWidth: screenWidth,
+            screenHeight: screenHeight,
+            City1: 'Jaffna',
+            City2: 'Kilinochchi',
+          ),
         ),
-        DistrictPageRowComponentWidget(
-          screenWidth: screenWidth,
-          screenHeight: screenHeight,
-          City1: 'Moneragala',
-          City2: 'Ratnapura',
+        Visibility(
+          visible: Provider.of<DetailsProvider>(context).province == 'NorthernProvince' ? true : false,
+          child: DistrictPageRowComponentWidget(
+            screenWidth: screenWidth,
+            screenHeight: screenHeight,
+            City1: 'Mannar',
+            City2: 'Vavuniya',
+          ),
         ),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            GestureDetector(
-              onTap: () {
-                Provider.of<DetailsProvider>(context, listen: false).setCity('Kegalle');
-                Navigator.pushNamed(context, '/searchTown');
-              },
-              child: HomePageBoxWidget(
-                screenWidth: screenWidth,
-                screenHeight: screenHeight,
-                text: 'Kegalle',
-                boxWidth: 0.45,
-              ),
-            ),
-            SizedBox(
-              width: screenWidth * 0.04,
-            ),
-          ],
+        Visibility(
+          visible: Provider.of<DetailsProvider>(context).province == 'NorthernProvince' ? true : false,
+          child: DistrictPageRowComponentWidget(
+            screenWidth: screenWidth,
+            screenHeight: screenHeight,
+            City1: 'Mullaitivu',
+            City2: '',
+          ),
+        ),
+        GestureDetector(
+          onTap: () {
+            Provider.of<DetailsProvider>(context, listen: false).setProvince('EasternProvince');
+          },
+          child: HomePageBoxWidget(
+            screenWidth: screenWidth,
+            screenHeight: screenHeight,
+            text: 'Eastern Province',
+            boxWidth: 0.95,
+          ),
+        ),
+        Visibility(
+          visible: Provider.of<DetailsProvider>(context).province == 'EasternProvince' ? true : false,
+          child: DistrictPageRowComponentWidget(
+            screenWidth: screenWidth,
+            screenHeight: screenHeight,
+            City1: 'Ampara',
+            City2: 'Trincomalee',
+          ),
+        ),
+        Visibility(
+          visible: Provider.of<DetailsProvider>(context).province == 'EasternProvince' ? true : false,
+          child: DistrictPageRowComponentWidget(
+            screenWidth: screenWidth,
+            screenHeight: screenHeight,
+            City1: 'Batticaloa',
+            City2: '',
+          ),
+        ),
+        GestureDetector(
+          onTap: () {
+            Provider.of<DetailsProvider>(context, listen: false).setProvince('NorthWesternProvince');
+          },
+          child: HomePageBoxWidget(
+            screenWidth: screenWidth,
+            screenHeight: screenHeight,
+            text: 'North Western Province ',
+            boxWidth: 0.95,
+          ),
+        ),
+        Visibility(
+          visible: Provider.of<DetailsProvider>(context).province == 'NorthWesternProvince' ? true : false,
+          child: DistrictPageRowComponentWidget(
+            screenWidth: screenWidth,
+            screenHeight: screenHeight,
+            City1: 'Puttalam',
+            City2: 'Kurunegala',
+          ),
+        ),
+        GestureDetector(
+          onTap: () {
+            Provider.of<DetailsProvider>(context, listen: false).setProvince('NorthCentralProvince');
+          },
+          child: HomePageBoxWidget(
+            screenWidth: screenWidth,
+            screenHeight: screenHeight,
+            text: 'North Central Province ',
+            boxWidth: 0.95,
+          ),
+        ),
+        Visibility(
+          visible: Provider.of<DetailsProvider>(context).province == 'NorthCentralProvince' ? true : false,
+          child: DistrictPageRowComponentWidget(
+            screenWidth: screenWidth,
+            screenHeight: screenHeight,
+            City1: 'Polonnaruwa',
+            City2: 'Anuradhapura',
+          ),
+        ),
+        GestureDetector(
+          onTap: () {
+            Provider.of<DetailsProvider>(context, listen: false).setProvince('UvaProvince');
+          },
+          child: HomePageBoxWidget(
+            screenWidth: screenWidth,
+            screenHeight: screenHeight,
+            text: 'Uva Province ',
+            boxWidth: 0.95,
+          ),
+        ),
+        Visibility(
+          visible: Provider.of<DetailsProvider>(context).province == 'UvaProvince' ? true : false,
+          child: DistrictPageRowComponentWidget(
+            screenWidth: screenWidth,
+            screenHeight: screenHeight,
+            City1: 'Moneragala',
+            City2: 'Badulla',
+          ),
+        ),
+        GestureDetector(
+          onTap: () {
+            Provider.of<DetailsProvider>(context, listen: false).setProvince('SabaragamuwaProvince');
+          },
+          child: HomePageBoxWidget(
+            screenWidth: screenWidth,
+            screenHeight: screenHeight,
+            text: 'Sabaragamuwa Province ',
+            boxWidth: 0.95,
+          ),
+        ),
+        Visibility(
+          visible: Provider.of<DetailsProvider>(context).province == 'SabaragamuwaProvince' ? true : false,
+          child: DistrictPageRowComponentWidget(
+            screenWidth: screenWidth,
+            screenHeight: screenHeight,
+            City1: 'Kegalle',
+            City2: 'Ratnapura',
+          ),
         ),
       ],
     );

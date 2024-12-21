@@ -15,12 +15,6 @@ class SecondScreen extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text(
-          "bajaj",
-          style: TextStyle(
-            color: Colors.white,
-          ),
-        ),
         backgroundColor: AppColors.color7,
       ),
       body: SafeArea(

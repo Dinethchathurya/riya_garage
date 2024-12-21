@@ -432,7 +432,7 @@ class DataClass {
 
   List<Map<String, dynamic>> getListOfProviders(details){
     List<Map<String, dynamic>> value = listofproviderslist[details] ?? 0;
-    print(value);
+   // print(value);
     return value;
   }
 }

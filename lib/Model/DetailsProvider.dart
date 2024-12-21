@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
-import 'package:riya_garage/Model/dataClass.dart';
 
 import '../Data/Bajaj/Maintenance/Ampara.dart';
 import '../Data/Bajaj/Maintenance/Anuradapura.dart';
+import 'dataClass.dart';
 
 class DetailsProvider with ChangeNotifier {
 
@@ -25,7 +25,7 @@ class DetailsProvider with ChangeNotifier {
 
   setCity (newCity){
     city = newCity;
-    print(company+category+city);
+    //print(company+category+city);
     setAvailableProviders();
     notifyListeners();
   }

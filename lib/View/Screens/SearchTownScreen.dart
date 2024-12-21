@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:riya_garage/Model/DetailsProvider.dart';
+import '../../Model/DetailsProvider.dart';
 import '../AppColors.dart';
 import 'Components/ProvidersListTileWidget.dart';
 

@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:riya_garage/Model/DetailsProvider.dart';
-import 'package:riya_garage/View/AppColors.dart';
-import 'package:riya_garage/View/Screens/DistrictsScreen.dart';
-import 'package:riya_garage/View/Screens/HomeScreen.dart';
-import 'package:riya_garage/View/Screens/SecondScreen.dart';
 
+import 'Model/DetailsProvider.dart';
+import 'View/AppColors.dart';
+import 'View/Screens/DistrictsScreen.dart';
+import 'View/Screens/HomeScreen.dart';
 import 'View/Screens/SearchTownScreen.dart';
+import 'View/Screens/SecondScreen.dart';
 
 void main() {
   runApp(const MyApp());

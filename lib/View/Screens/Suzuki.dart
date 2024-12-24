@@ -5,8 +5,8 @@ import '../../Model/DetailsProvider.dart';
 import '../AppColors.dart';
 import 'Components/SecondPageBoxWidget.dart';
 
-class SecondScreen extends StatelessWidget {
-  const SecondScreen({super.key});
+class Suzuki extends StatelessWidget {
+  const Suzuki({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -19,10 +19,10 @@ class SecondScreen extends StatelessWidget {
           color: Colors.white,
         ),
         title: const Text(
-          'Vehicle Brand',
+          'Suzuki',
           style : TextStyle(
-           color: Colors.white,
-        ),
+            color: Colors.white,
+          ),
         ),
         centerTitle : true,
         backgroundColor: AppColors.color7,

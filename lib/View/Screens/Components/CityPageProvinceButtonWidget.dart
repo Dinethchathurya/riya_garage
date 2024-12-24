@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 
 import '../../AppColors.dart';
 
-class HomePageBoxWidget extends StatelessWidget {
-  const HomePageBoxWidget({
+class CityPageProvinceButtonWidget extends StatelessWidget {
+  const CityPageProvinceButtonWidget({
     super.key,
     required this.screenWidth,
     required this.screenHeight,
@@ -22,7 +22,7 @@ class HomePageBoxWidget extends StatelessWidget {
       width: screenWidth * boxWidth,
       height: screenHeight * 0.2,
       decoration: BoxDecoration(
-        color: AppColors.themeBlue,
+        color: AppColors.darkBlue,
         borderRadius: BorderRadius.circular(20),
         boxShadow: [
           BoxShadow(
@@ -35,13 +35,23 @@ class HomePageBoxWidget extends StatelessWidget {
       ),
       margin: EdgeInsets.only(top: screenHeight * 0.05),
       child: Center(
-        child: Text(
-          text,
-          style: const TextStyle(
-            color: Colors.white,
-            fontSize: 22.0,
-            fontWeight: FontWeight.bold,
-          ),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(
+              text,
+              style: const TextStyle(
+                color: Colors.white,
+                fontSize: 25.0,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            const Icon(
+              Icons.arrow_drop_down,
+              color: Colors.white,
+              size: 45.0,
+            ),
+          ],
         ),
       ),
     );

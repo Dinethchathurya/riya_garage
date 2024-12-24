@@ -18,7 +18,6 @@ class ProvidersListTileWidget extends StatelessWidget {
   final String providerAddress;
   final String providerPhoneNumber;
 
-
   @override
   Widget build(BuildContext context) {
     return ListTile(
@@ -30,9 +29,10 @@ class ProvidersListTileWidget extends StatelessWidget {
       ),
       subtitle: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
+        spacing: 0.0,
         children: [
           Text(providerAddress),
-          const SizedBox(height: 4), // Adds some spacing between the lines
+          //const SizedBox(height: 4), // Adds some spacing between the lines
           Text(providerPhoneNumber), // The additional detail you want to add
         ],
       ),

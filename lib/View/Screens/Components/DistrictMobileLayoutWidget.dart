@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:provider/provider.dart';
 import '../../../Model/DetailsProvider.dart';
+import 'CityPageProvinceButtonWidget.dart';
 import 'DistrictPageRowComponentWidget.dart';
 import 'HomePageBoxWidget.dart';
 
@@ -22,7 +23,7 @@ class DistrictMobileLayoutWidget extends StatelessWidget {
           onTap: () {
             Provider.of<DetailsProvider>(context, listen: false).setProvince('WesternProvince');
           },
-          child: HomePageBoxWidget(
+          child: CityPageProvinceButtonWidget(
             screenWidth: screenWidth,
             screenHeight: screenHeight,
             text: 'Western Province',
@@ -51,7 +52,7 @@ class DistrictMobileLayoutWidget extends StatelessWidget {
           onTap: () {
             Provider.of<DetailsProvider>(context, listen: false).setProvince('CentralProvince');
           },
-          child: HomePageBoxWidget(
+          child: CityPageProvinceButtonWidget(
             screenWidth: screenWidth,
             screenHeight: screenHeight,
             text: 'Central Province',
@@ -80,7 +81,7 @@ class DistrictMobileLayoutWidget extends StatelessWidget {
           onTap: () {
             Provider.of<DetailsProvider>(context, listen: false).setProvince('SouthernProvince');
           },
-          child: HomePageBoxWidget(
+          child: CityPageProvinceButtonWidget(
             screenWidth: screenWidth,
             screenHeight: screenHeight,
             text: 'Southern Province',
@@ -109,7 +110,7 @@ class DistrictMobileLayoutWidget extends StatelessWidget {
           onTap: () {
             Provider.of<DetailsProvider>(context, listen: false).setProvince('NorthernProvince');
           },
-          child: HomePageBoxWidget(
+          child: CityPageProvinceButtonWidget(
             screenWidth: screenWidth,
             screenHeight: screenHeight,
             text: 'Northern Province',
@@ -147,7 +148,7 @@ class DistrictMobileLayoutWidget extends StatelessWidget {
           onTap: () {
             Provider.of<DetailsProvider>(context, listen: false).setProvince('EasternProvince');
           },
-          child: HomePageBoxWidget(
+          child: CityPageProvinceButtonWidget(
             screenWidth: screenWidth,
             screenHeight: screenHeight,
             text: 'Eastern Province',
@@ -176,7 +177,7 @@ class DistrictMobileLayoutWidget extends StatelessWidget {
           onTap: () {
             Provider.of<DetailsProvider>(context, listen: false).setProvince('NorthWesternProvince');
           },
-          child: HomePageBoxWidget(
+          child: CityPageProvinceButtonWidget(
             screenWidth: screenWidth,
             screenHeight: screenHeight,
             text: 'North Western Province ',
@@ -196,7 +197,7 @@ class DistrictMobileLayoutWidget extends StatelessWidget {
           onTap: () {
             Provider.of<DetailsProvider>(context, listen: false).setProvince('NorthCentralProvince');
           },
-          child: HomePageBoxWidget(
+          child: CityPageProvinceButtonWidget(
             screenWidth: screenWidth,
             screenHeight: screenHeight,
             text: 'North Central Province ',
@@ -216,7 +217,7 @@ class DistrictMobileLayoutWidget extends StatelessWidget {
           onTap: () {
             Provider.of<DetailsProvider>(context, listen: false).setProvince('UvaProvince');
           },
-          child: HomePageBoxWidget(
+          child: CityPageProvinceButtonWidget(
             screenWidth: screenWidth,
             screenHeight: screenHeight,
             text: 'Uva Province ',
@@ -236,7 +237,7 @@ class DistrictMobileLayoutWidget extends StatelessWidget {
           onTap: () {
             Provider.of<DetailsProvider>(context, listen: false).setProvince('SabaragamuwaProvince');
           },
-          child: HomePageBoxWidget(
+          child: CityPageProvinceButtonWidget(
             screenWidth: screenWidth,
             screenHeight: screenHeight,
             text: 'Sabaragamuwa Province ',

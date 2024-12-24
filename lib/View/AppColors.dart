@@ -17,4 +17,5 @@ class AppColors {
 
 
   static const Color themeBlue = Color(0xFF204E8D);
+  static const Color darkBlue = Color(0xFF19356C);
 }

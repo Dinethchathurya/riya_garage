@@ -9,6 +9,7 @@ import 'View/Screens/HomeScreen.dart';
 import 'View/Screens/Honda.dart';
 import 'View/Screens/SearchTownScreen.dart';
 import 'View/Screens/SecondScreen.dart';
+import 'View/Screens/Suzuki.dart';
 import 'View/Screens/Toyota.dart';
 
 void main() {
@@ -31,7 +32,7 @@ class MyApp extends StatelessWidget {
             routes:{
               '/': (context) => MyHomePage(),          // Home route
               '/bajaj': (context) => Bajaj(),
-              '/suzuki': (context) => Bajaj(),
+              '/suzuki': (context) => Suzuki(),
               '/toyota': (context) => Toyota(),
               '/honda': (context) => Honda(),
               '/districts' : (context) => DistrictsScreen(),

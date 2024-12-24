@@ -15,7 +15,7 @@ class IconPersonWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Icon(
       Icons.person,
-      size: screenWidth * 0.1,
+      size: screenWidth <= 600 ? screenWidth * 0.1 : screenWidth * 0.06,
       color: AppColors.themeBlue,
     );
   }

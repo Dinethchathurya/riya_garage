@@ -1,5 +1,7 @@
 import 'package:flutter/cupertino.dart';
+import 'package:provider/provider.dart';
 
+import '../../../Model/DetailsProvider.dart';
 import 'HomePageBoxWidget.dart';
 
 class DistrictScreenRowComponentForTabletWidget extends StatelessWidget {
@@ -21,6 +23,7 @@ class DistrictScreenRowComponentForTabletWidget extends StatelessWidget {
       children: [
         GestureDetector(
             onTap: (){
+              Provider.of<DetailsProvider>(context, listen: false).setCity(citys[0]);
               Navigator.pushNamed(context, '/searchTown');
             },
             child: HomePageBoxWidget(screenWidth: screenWidth, screenHeight: screenHeight, text: citys[0], boxWidth: 0.3,)),
@@ -29,6 +32,7 @@ class DistrictScreenRowComponentForTabletWidget extends StatelessWidget {
         ),
         GestureDetector(
             onTap: (){
+              Provider.of<DetailsProvider>(context, listen: false).setCity(citys[1]);
               Navigator.pushNamed(context, '/searchTown');
             },
             child: HomePageBoxWidget(screenWidth: screenWidth, screenHeight: screenHeight, text: citys[1], boxWidth: 0.3,)),
@@ -37,6 +41,7 @@ class DistrictScreenRowComponentForTabletWidget extends StatelessWidget {
         ),
         GestureDetector(
             onTap: (){
+              Provider.of<DetailsProvider>(context, listen: false).setCity(citys[2]);
               Navigator.pushNamed(context, '/searchTown');
             },
             child: HomePageBoxWidget(screenWidth: screenWidth, screenHeight: screenHeight, text: citys[2], boxWidth: 0.3,)),

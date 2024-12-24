@@ -18,7 +18,6 @@ class ProvidersListTileWidget extends StatelessWidget {
   final String providerAddress;
   final String providerPhoneNumber;
 
-
   @override
   Widget build(BuildContext context) {
     return ListTile(

@@ -31,7 +31,7 @@ class _SearchTownScreenState extends State<SearchTownScreen> {
         ),
         centerTitle :true,
         backgroundColor: AppColors.color7,
-        iconTheme: IconThemeData(
+        iconTheme: const IconThemeData(
           color: Colors.white,
         ),
       ),
@@ -60,7 +60,6 @@ class _SearchTownScreenState extends State<SearchTownScreen> {
                 ),
               ),
             ),
-            // Use Expanded to allow ListView to take up remaining space
             Expanded(
               child: Consumer<DetailsProvider>(
                 builder: (context, providers, child) {

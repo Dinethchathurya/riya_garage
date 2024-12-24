@@ -41,7 +41,7 @@ class MyHomePage extends StatelessWidget {
               GestureDetector(
                 onTap: (){
                   Provider.of<DetailsProvider>(context, listen: false).setCompany('Bajaj');
-                  Navigator.pushNamed(context, '/second');
+                  Navigator.pushNamed(context, '/bajaj');
                 },
                 child: HomePageBoxWidget(screenWidth: screenWidth, screenHeight: screenHeight, text: 'BAJAJ', boxWidth: 0.40,),
               ),
@@ -51,7 +51,7 @@ class MyHomePage extends StatelessWidget {
               GestureDetector(
                 onTap: (){
                   Provider.of<DetailsProvider>(context, listen: false).setCompany('Suzuki');
-                  Navigator.pushNamed(context, '/second');
+                  Navigator.pushNamed(context, '/suzuki');
                 },
                   child: HomePageBoxWidget(screenWidth: screenWidth, screenHeight: screenHeight, text: 'SUZUKI', boxWidth: 0.40,),
               ),
@@ -63,7 +63,7 @@ class MyHomePage extends StatelessWidget {
               GestureDetector(
                   onTap: (){
                     Provider.of<DetailsProvider>(context, listen: false).setCompany('Toyota');
-                    Navigator.pushNamed(context, '/second');
+                    Navigator.pushNamed(context, '/toyota');
                   },
                   child: HomePageBoxWidget(screenWidth: screenWidth, screenHeight: screenHeight, text: 'TOYOTA', boxWidth: 0.40,),
               ),
@@ -73,7 +73,7 @@ class MyHomePage extends StatelessWidget {
               GestureDetector(
                   onTap: (){
                     Provider.of<DetailsProvider>(context, listen: false).setCompany('Honda');
-                    Navigator.pushNamed(context, '/second');
+                    Navigator.pushNamed(context, '/honda');
                   },
                   child: HomePageBoxWidget(screenWidth: screenWidth, screenHeight: screenHeight, text: 'HONDA', boxWidth: 0.40,),
               ),

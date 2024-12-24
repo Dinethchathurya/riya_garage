@@ -46,8 +46,7 @@ class CityPageProvinceButtonWidget extends StatelessWidget {
                 fontWeight: FontWeight.bold,
               ),
             ),
-
-            Icon(
+            const Icon(
               Icons.arrow_drop_down,
               color: Colors.white,
               size: 45.0,

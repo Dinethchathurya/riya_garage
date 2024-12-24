@@ -15,6 +15,16 @@ class SecondScreen extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
+        iconTheme: const IconThemeData(
+          color: Colors.white,
+        ),
+        title: const Text(
+          'Vehicle Brand',
+          style : TextStyle(
+           color: Colors.white,
+        ),
+        ),
+        centerTitle : true,
         backgroundColor: AppColors.color7,
       ),
       body: SafeArea(

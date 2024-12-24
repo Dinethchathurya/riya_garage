@@ -13,7 +13,7 @@ class HomePageFirebaseImageWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: screenWidth * 0.85,
+      width: screenWidth * 0.60,
       height: screenWidth <= 600 ? screenHeight * 0.2 :  screenHeight * 0.28,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(20),

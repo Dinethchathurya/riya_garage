@@ -14,11 +14,15 @@ class DistrictsScreen extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
+        iconTheme: IconThemeData(
+          color: Colors.white,
+        ),
         title: const Text("City",
           style: TextStyle(
             color: Colors.white,
           ),
         ),
+        centerTitle: true,
         backgroundColor: AppColors.color7,
       ),
       body: SafeArea(

@@ -23,15 +23,17 @@ class _SearchTownScreenState extends State<SearchTownScreen> {
 
     return Scaffold(
       appBar: AppBar(
-
-        // leading: ,
         title: const Text(
           "Providers",
           style: TextStyle(
             color: Colors.white,
           ),
         ),
+        centerTitle :true,
         backgroundColor: AppColors.color7,
+        iconTheme: IconThemeData(
+          color: Colors.white,
+        ),
       ),
       body: SafeArea(
         child: Column(
@@ -44,7 +46,7 @@ class _SearchTownScreenState extends State<SearchTownScreen> {
                   _filterProviders(query);
                 },
                 leading: const Icon(Icons.search),
-                hintText: 'Search Here',
+                hintText: 'Search Town',
                 shape: WidgetStateProperty.all(
                   RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(10.0), // Set your desired radius

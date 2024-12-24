@@ -27,9 +27,9 @@ class SecondPageBoxWidget extends StatelessWidget {
         boxShadow: [
           BoxShadow(
             color: Colors.black.withOpacity(0.5), // Shadow color with opacity
-            spreadRadius: 4, // How much the shadow spreads
+            spreadRadius: 6, // How much the shadow spreads
             blurRadius: 8,   // Softening the shadow (higher value means more blur)
-            offset: const Offset(5, 5), // Offset in the x and y directions
+            offset: const Offset(0, 0), // Offset in the x and y directions
           ),
         ],
       ),

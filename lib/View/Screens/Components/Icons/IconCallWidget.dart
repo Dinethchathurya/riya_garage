@@ -13,7 +13,7 @@ class IconCallWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Icon(
-      Icons.add_ic_call,
+      Icons.call,
       size: screenWidth * 0.1,
       color: Colors.green,
     );

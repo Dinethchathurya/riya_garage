@@ -1,9 +1,9 @@
-import 'package:Riyera/View/Screens/Bajaj.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import 'Model/DetailsProvider.dart';
 import 'View/AppColors.dart';
+import 'View/Screens/Bajaj.dart';
 import 'View/Screens/DistrictsScreen.dart';
 import 'View/Screens/HomeScreen.dart';
 import 'View/Screens/Honda.dart';

@@ -3,6 +3,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'Icons/IconCallWidget.dart';
 import 'Icons/IconPersonWidget.dart';
+import 'package:url_launcher/link.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class ProvidersListTileWidget extends StatelessWidget {
   const ProvidersListTileWidget({
@@ -38,17 +40,11 @@ class ProvidersListTileWidget extends StatelessWidget {
       ),
       trailing: GestureDetector(
         onTap: () async{
-
-          // final Uri _url = Uri.parse('tel:0777426101');;
-          // // Replace with the actual number
-          // try {
-          //   if (!await launchUrl(_url)) {
-          //     throw Exception('Could not launch $_url');
-          //   }
-          // }catch(er){
-          //   print("url launchUrl error : ");
-          // }
-
+          final Uri launchUri = Uri(
+            scheme: 'tel',
+            path: '0777426101',
+          );
+          await launchUrl(launchUri);
         },
         child: IconCallWidget(screenWidth: screenWidth),
       ),

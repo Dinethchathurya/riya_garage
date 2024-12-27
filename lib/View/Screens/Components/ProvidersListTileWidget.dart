@@ -3,7 +3,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'Icons/IconCallWidget.dart';
 import 'Icons/IconPersonWidget.dart';
-import 'package:url_launcher/link.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class ProvidersListTileWidget extends StatelessWidget {
@@ -42,7 +41,7 @@ class ProvidersListTileWidget extends StatelessWidget {
         onTap: () async{
           final Uri launchUri = Uri(
             scheme: 'tel',
-            path: '0777426101',
+            path: providerPhoneNumber,
           );
           await launchUrl(launchUri);
         },
